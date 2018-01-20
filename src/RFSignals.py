@@ -14,3 +14,4 @@ def affich():
     print(title)
     
     new_days.close()
+    

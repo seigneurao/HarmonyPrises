@@ -28,3 +28,4 @@ for event in device.read_loop():
                 print("Salut Q")
             elif keyCode == "KEY_3":
                 affich()
+                
