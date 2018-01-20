@@ -13,7 +13,7 @@ while aCommand != "0":
     if aCommand == "Q":
         print("Haha")
     elif aCommand == "2":
-        print("Héhé")
+        print("Hihi")
     elif aCommand == "3":
         print("Hoho")
 
