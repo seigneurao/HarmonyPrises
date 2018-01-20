@@ -9,12 +9,12 @@ from RFSignals import affich
 
 device = evdev.InputDevice('/dev/input/event2')
 
-# Etats du bouton
-# Relâché
+# Key state
+# Released
 KEY_UP = 0
-# Pressé
+# Pressed
 KEY_DOWN = 1
-# Tenu appuyé
+# Held
 KEY_HOLD = 2
 
 for event in device.read_loop():
