@@ -4,20 +4,17 @@ Created on 20 janv. 2018
 @author: Lionel
 '''
 
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-
 import evdev
 from RFSignals import affich
 
 device = evdev.InputDevice('/dev/input/event2')
 
 # Etats du bouton
-# Rel‚chÈ
+# Rel√¢ch√©
 KEY_UP = 0
-# PressÈ
+# Press√©
 KEY_DOWN = 1
-# Tenu appuyÈ
+# Tenu appuy√©
 KEY_HOLD = 2
 
 for event in device.read_loop():
