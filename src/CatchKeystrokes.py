@@ -4,6 +4,9 @@ Created on 20 janv. 2018
 @author: Lionel
 '''
 
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 import evdev
 from RFSignals import affich
 

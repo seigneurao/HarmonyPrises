@@ -3,6 +3,7 @@ Created on 20 janv. 2018
 
 @author: Lionel
 '''
+
 def add(a, b):
     return a + b
 
