@@ -10,4 +10,4 @@ device = evdev.InputDevice('/dev/input/event2')
 
 for event in device.read_loop():
     if event.type == evdev.ecodes.EV_KEY:
-        print(evdev.categorize(event))
+        print(evdev.categorize(event).value)
