@@ -10,4 +10,10 @@ device = evdev.InputDevice('/dev/input/event2')
 
 for event in device.read_loop():
     if event.type == evdev.ecodes.EV_KEY:
-        print(evdev.categorize(event).value)
+        keyEvent = evdev.categorize(event)
+        if keyEvent.keystate == 1:
+            keyCode = keyEvent.keycode
+            if keyCode == "KEY_2":
+                print("Salut 2")
+            elif keyCode == "KEY_Q":
+                print("Salut Q")
