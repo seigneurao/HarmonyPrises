@@ -7,7 +7,7 @@ Created on 20 janv. 2018
 def affich():
     title = 'Days of the Week\n'
 
-    new_path = '/src/www/HarmonyPrises/src'
+    new_path = '/src/www/HarmonyPrises/src/new_days.txt'
     new_days = open(new_path,'w')
     
     new_days.write(title)
