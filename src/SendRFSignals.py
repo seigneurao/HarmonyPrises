@@ -23,5 +23,3 @@ def affichage():
     
 def get_app():
     return app
-
-app.run()
