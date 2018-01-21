@@ -4,14 +4,23 @@ Created on 20 janv. 2018
 @author: Lionel
 '''
 
-def affich():
-    title = 'Days of the Week\n'
+OUTLET1_ON_SIGNAL = "blah"
+OUTLET1_OFF_SIGNAL = "bleh"
+OUTLET2_ON_SIGNAL = "blih"
+OUTLET2_OFF_SIGNAL = "bloh"
 
-    new_path = '/src/www/HarmonyPrises/src/new_days.txt'
-    new_days = open(new_path,'w')
+def switchOnOutlet1():
+    emitRFSignal(OUTLET1_ON_SIGNAL)
     
-    new_days.write(title)
-    print(title)
-    
-    new_days.close()
+def switchOffOutlet1():
+    emitRFSignal(OUTLET1_OFF_SIGNAL)
+
+def switchOnOutlet2():
+    emitRFSignal(OUTLET2_ON_SIGNAL)
+
+def switchOffOutlet2():
+    emitRFSignal(OUTLET2_OFF_SIGNAL)
+
+def emitRFSignal(signalCode):
+    print(signalCode)
     
