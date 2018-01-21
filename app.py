@@ -11,5 +11,5 @@ HARMONYPRISES_PARENT_DIR = os.path.dirname(os.path.dirname(__file__))
 sys.path.insert(0, HARMONYPRISES_PARENT_DIR) 
 
 # Create the wsgi application
-from src.CatchKeystrokes import get_app
+from src.SendRFSignals import get_app
 application = get_app()
