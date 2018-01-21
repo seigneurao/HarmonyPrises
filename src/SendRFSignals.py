@@ -4,19 +4,24 @@ Created on 20 janv. 2018
 @author: Lionel
 '''
 
-from bottle import route, run, template
+from bottle import Bottle, run, template
 from RFSignals import affich
 
-@route('/hello/<name>')
+app = Bottle()
+
+@app.route('/hello/<name>')
 def index(name):
     return template('<b>Hello {{name}}</b>!', name=name)
 
-@route('/testlionel/<machin>/<truc>')
+@app.route('/testlionel/<machin>/<truc>')
 def bidule(machin, truc):
     return template('{{bonjour}} et {{what}}', bonjour=machin, what=truc)
 
-@route('/affichage')
+@app.route('/affichage')
 def affichage():
     affich()
+    
+def get_app():
+    return app
 
-run(host='localhost', port=8080)
+run(app, host='localhost', port=8080)
