@@ -23,4 +23,3 @@ def switchOffOutlet2():
 
 def emitRFSignal(signalCode):
     print(signalCode)
-    

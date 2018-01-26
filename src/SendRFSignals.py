@@ -9,7 +9,7 @@ from bottle import Bottle
 
 app = Bottle()
 
-@app.route('/<outletNumber>/<outletState>')
+@app.route('/switch/<outletNumber>/<outletState>')
 def switchOutlet(outletNumber, outletState):
     targetMethodName = "switch" + str.capitalize(outletState) + "Outlet" + outletNumber
     targetMethod = getattr(RFSignals, targetMethodName)
