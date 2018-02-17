@@ -9,21 +9,15 @@ from bottle import Bottle
 
 app = Bottle()
 
-@app.route('/outlet1/on')
-def switchOnOutlet1():
-    RFSignals.switchOnOutlet1()
-
-@app.route('/outlet1/off')
-def switchOffOutlet1():
-    RFSignals.switchOffOutlet1()
-
-@app.route('/outlet2/on')
-def switchOnOutlet2():
-    RFSignals.switchOnOutlet2()
-
-@app.route('/outlet2/off')
-def switchOffOutlet2():
-    RFSignals.switchOffOutlet2()
+@app.route('/switch/<outletNumber>/<outletState>')
+def switchOutlet(outletNumber, outletState):
+    targetMethodName = "switch" + str.capitalize(outletState) + "Outlet" + outletNumber
+    targetMethod = getattr(RFSignals, targetMethodName)
+    targetMethod()
+    
+@app.route('/health') 
+def bidule(): 
+    return 'Hello world!' 
     
 def get_app():
     return app
