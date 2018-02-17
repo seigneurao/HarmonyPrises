@@ -16,6 +16,8 @@ OUTLET1_ON_SIGNAL = "1110101011101010110011001"
 OUTLET1_OFF_SIGNAL = "1110101011101010110000111"
 OUTLET2_ON_SIGNAL = "1110101011101010001111001"
 OUTLET2_OFF_SIGNAL = "1110101011101010001100111"
+OUTLET3_ON_SIGNAL = ""
+OUTLET3_OFF_SIGNAL = ""
 
 one_short_delay = 0.00009
 one_long_delay = 0.00055
@@ -37,6 +39,12 @@ def switchOnOutlet2():
 
 def switchOffOutlet2():
     emitRFSignal(OUTLET2_OFF_SIGNAL)
+    
+def switchOnOutlet3():
+    emitRFSignal(OUTLET3_ON_SIGNAL)
+
+def switchOffOutlet3():
+    emitRFSignal(OUTLET3_OFF_SIGNAL)
 
 def emitRFSignal(signalCode):
     GPIO.setmode(GPIO.BCM)

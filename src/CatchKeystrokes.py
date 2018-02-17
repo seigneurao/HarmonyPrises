@@ -22,6 +22,8 @@ keyMapping["KEY_1"] = "switchOnOutlet1"
 keyMapping["KEY_2"] = "switchOffOutlet1"
 keyMapping["KEY_3"] = "switchOnOutlet2"
 keyMapping["KEY_4"] = "switchOffOutlet2"
+keyMapping["KEY_5"] = "switchOnOutlet3"
+keyMapping["KEY_6"] = "switchOffOutlet3"
 
 
 for event in device.read_loop():
