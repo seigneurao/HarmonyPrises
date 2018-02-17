@@ -5,7 +5,7 @@ Created on 20 janv. 2018
 '''
 
 import RFSignals
-from bottle import Bottle
+from bottle import Bottle, template
 
 app = Bottle()
 
@@ -14,6 +14,10 @@ def switchOutlet(outletNumber, outletState):
     targetMethodName = "switch" + str.capitalize(outletState) + "Outlet" + outletNumber
     targetMethod = getattr(RFSignals, targetMethodName)
     targetMethod()
+    
+@app.route('/health') 
+def bidule(): 
+    return template('Hello') 
     
 def get_app():
     return app
