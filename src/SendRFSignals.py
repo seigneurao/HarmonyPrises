@@ -17,7 +17,7 @@ def switchOutlet(outletNumber, outletState):
     
 @app.route('/health') 
 def bidule(): 
-    return template('Hello') 
+    return 'Hello world!' 
     
 def get_app():
     return app
