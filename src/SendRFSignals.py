@@ -5,7 +5,7 @@ Created on 20 janv. 2018
 '''
 
 import RFSignals
-from bottle import Bottle, template
+from bottle import Bottle
 
 app = Bottle()
 
