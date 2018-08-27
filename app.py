@@ -8,7 +8,7 @@ import os, sys
 
 # Make sure the harmonyprises module is in the PYTHON_PATH and importable
 HARMONYPRISES_PARENT_DIR = os.path.dirname(os.path.dirname(__file__))
-sys.path.insert(0, HARMONYPRISES_PARENT_DIR) 
+sys.path.insert(0, os.path.join(HARMONYPRISES_PARENT_DIR, 'src'))
 
 # Create the wsgi application
 from src.SendRFSignals import get_app
