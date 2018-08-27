@@ -4,7 +4,7 @@ Created on 20 janv. 2018
 @author: Lionel
 '''
 
-from app import RFSignals
+from src.RFSignals import RFSignals
 from bottle import Bottle
 
 app = Bottle()
